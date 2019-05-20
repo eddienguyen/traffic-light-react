@@ -1,0 +1,43 @@
+.traffic-light {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #333333;
+  border-radius: 30px;
+  width: 120px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(10, 10, 10, 0.5);
+}
+
+.bulb {
+  border-radius: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  opacity: 0.3;
+  width: 80px;
+  height: 80px;
+
+  // state
+  &.active {
+    opacity: 1;
+  }
+
+  // modifier
+  &--red {
+    background-color: #ff0000;
+    box-shadow: 0 0 15px rgba($color: #ff0000, $alpha: 0.5);
+  }
+  &--yellow {
+    background-color: #ffff00;
+    box-shadow: 0 0 15px rgba($color: #ffff00, $alpha: 0.5);
+  }
+  &--green {
+    background-color: #00ff00;
+    box-shadow: 0 0 15px rgba($color: #00ff00, $alpha: 0.5);
+  }
+}
